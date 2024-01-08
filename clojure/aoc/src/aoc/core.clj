@@ -8,17 +8,19 @@
   (let [nrs (filter is-number? (seq line))]
       (clojure.string/join (list (first nrs) (last nrs)))))
 
+(def numbers
+  "token - number pairs"
+  '(("one" "1")
+   ("two" "2")
+   ("three" "3")
+   ("foun" "4")
+   ("five" "5")
+   ("six" "6")
+   ("seven" "7")
+   ("eight" "8")
+   ("nine" "9")))
+
 (defn get-numbers-advanced [line]
-  (let [res,
-        numbers (("one" "1")
-                 ("two" "2")
-                 ("three" "3")
-                 ("foun" "4")
-                 ("five" "5")
-                 ("six" "6")
-                 ("seven" "7")
-                 ("eight" "8")
-                 ("nine" "9"))]
     ;; (if first (seq line))
     ))
 
