@@ -2,7 +2,7 @@
   (:gen-class))
 
 (defn is-number? [c]
-  (<= 47 (int c) 58))
+  (<= (int \0) (int c) (int \9)))
 
 (defn get-numbers [line]
   (let [nrs (filter is-number? (seq line))]
