@@ -11,10 +11,7 @@ NUMBERS = (
 )
 
 def is_number(char: str):
-    return 47 < ord(char) < 58
-
-def get_numbers(line: str):
-    return [c for c in line if is_number(c)]
+    return ord("0") <= ord(char) <= ord("9")
 
 def get_numbers_advanced(line: str):
     nrs = []
@@ -32,7 +29,8 @@ def get_numbers_advanced(line: str):
 def process_lines(lines: str):
     res = 0
     for l in lines.split('\n'):
-        nrs = get_numbers_advanced(l)
+        # nrs = [c for c in l if is_number(c)]
+        nrs = get_numbers(l)
         if nrs:
             nr = int(nrs[0] + nrs[-1])
             res += nr
